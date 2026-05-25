@@ -73,16 +73,22 @@ navLinks.querySelectorAll('a').forEach(a => {
 // Counter animation
 function animateCounter(el) {
   const target = parseInt(el.dataset.target);
+  const prefix = el.dataset.prefix || '';
+  const suffix = el.dataset.suffix || '';
   const duration = 1800;
   const start = performance.now();
+
+  function fmt(v) {
+    return prefix + (v >= 1000 ? v.toLocaleString('pt-BR') : v) + suffix;
+  }
 
   function step(now) {
     const progress = Math.min((now - start) / duration, 1);
     const ease = 1 - Math.pow(1 - progress, 3);
     const value = Math.floor(ease * target);
-    el.textContent = value >= 1000 ? value.toLocaleString('pt-BR') : value;
+    el.textContent = fmt(value);
     if (progress < 1) requestAnimationFrame(step);
-    else el.textContent = target >= 1000 ? target.toLocaleString('pt-BR') : target;
+    else el.textContent = fmt(target);
   }
   requestAnimationFrame(step);
 }
@@ -116,7 +122,7 @@ const counterObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.15 }
 );
 const numerosSection = document.getElementById('numeros');
 if (numerosSection) counterObserver.observe(numerosSection);

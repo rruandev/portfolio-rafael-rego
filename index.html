@@ -73,20 +73,20 @@
     <div class="container">
       <div class="numeros-grid">
         <div class="numero-card">
-          <h3 class="counter" data-target="98">0</h3>
+          <h3 class="counter" data-target="98" data-prefix="+">0</h3>
           <p>Eventos Realizados</p>
         </div>
         <div class="numero-card">
-          <h3 class="counter" data-target="10">0</h3>
+          <h3 class="counter" data-target="10" data-prefix="+">0</h3>
           <p>Anos de Experiência</p>
         </div>
         <div class="numero-card">
-          <h3 class="counter" data-target="50000">0</h3>
+          <h3 class="counter" data-target="50000" data-prefix="+">0</h3>
           <p>Pessoas Impactadas</p>
         </div>
         <div class="numero-card">
-          <h3 class="counter" data-target="98">0</h3>
-          <p>% Satisfação</p>
+          <h3 class="counter" data-target="98" data-suffix="%">0</h3>
+          <p>Satisfação</p>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@
       <div class="eventos-grid">
 
         <div class="evento-card grande">
-          <div class="evento-img" style="background: linear-gradient(135deg, #1a0533, #5c0a8e);">
+          <div class="evento-img" style="background: url('https://images.unsplash.com/photo-1516450360452-9312f5463526?w=1000&q=80&fit=crop') center/cover no-repeat, linear-gradient(135deg, #1a0533, #5c0a8e);">
             <div class="evento-overlay">
               <span class="evento-tipo">Festival</span>
               <h3>Noite Neon</h3>
@@ -110,7 +110,7 @@
         </div>
 
         <div class="evento-card">
-          <div class="evento-img" style="background: linear-gradient(135deg, #0a1628, #1a3a6b);">
+          <div class="evento-img" style="background: url('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80&fit=crop') center/cover no-repeat, linear-gradient(135deg, #0a1628, #1a3a6b);">
             <div class="evento-overlay">
               <span class="evento-tipo">Corporativo</span>
               <h3>Summit Tech 2024</h3>
@@ -120,7 +120,7 @@
         </div>
 
         <div class="evento-card">
-          <div class="evento-img" style="background: linear-gradient(135deg, #1a0a00, #6b2a00);">
+          <div class="evento-img" style="background: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80&fit=crop') center/cover no-repeat, linear-gradient(135deg, #1a0a00, #6b2a00);">
             <div class="evento-overlay">
               <span class="evento-tipo">Casamento</span>
               <h3>Ana & Pedro</h3>
@@ -130,7 +130,7 @@
         </div>
 
         <div class="evento-card">
-          <div class="evento-img" style="background: linear-gradient(135deg, #001a0a, #006b2a);">
+          <div class="evento-img" style="background: url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&fit=crop') center/cover no-repeat, linear-gradient(135deg, #001a0a, #006b2a);">
             <div class="evento-overlay">
               <span class="evento-tipo">Show</span>
               <h3>Open Air Fest</h3>
@@ -140,7 +140,7 @@
         </div>
 
         <div class="evento-card">
-          <div class="evento-img" style="background: linear-gradient(135deg, #1a1a00, #6b6b00);">
+          <div class="evento-img" style="background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80&fit=crop') center/cover no-repeat, linear-gradient(135deg, #1a1a00, #6b6b00);">
             <div class="evento-overlay">
               <span class="evento-tipo">Formatura</span>
               <h3>UniCEUB 2023</h3>
@@ -150,7 +150,7 @@
         </div>
 
         <div class="evento-card grande">
-          <div class="evento-img" style="background: linear-gradient(135deg, #1a001a, #6b006b);">
+          <div class="evento-img" style="background: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1000&q=80&fit=crop') center/cover no-repeat, linear-gradient(135deg, #1a001a, #6b006b);">
             <div class="evento-overlay">
               <span class="evento-tipo">Lançamento</span>
               <h3>Gala Exclusiva</h3>
@@ -305,6 +305,13 @@
       <p>© 2025 Rafael Ferreira Rego · Produtor de Eventos · Sobradinho, DF</p>
     </div>
   </footer>
+
+  <a href="https://wa.me/5561981620217" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.121 1.531 5.856L.057 23.25l5.565-1.459A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.17-1.4l-.37-.22-3.303.867.882-3.218-.24-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
