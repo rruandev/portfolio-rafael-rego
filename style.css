@@ -331,16 +331,34 @@ section { padding: 6rem 0; }
 
 #eventos h2 { font-size: 2.8rem; margin-bottom: 3rem; }
 
-.eventos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 280px;
+.eventos-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 0.5rem 0;
+}
+
+.eventos-track {
+  display: flex;
   gap: 1.25rem;
+  width: max-content;
+  animation: scroll-left 28s linear infinite;
+}
+
+.eventos-track:hover { animation-play-state: paused; }
+
+.eventos-track .evento-card {
+  width: 400px;
+  height: 280px;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .evento-card { border-radius: 1rem; overflow: hidden; cursor: pointer; }
-
-.evento-card.grande { grid-column: span 2; }
 
 .evento-img {
   width: 100%;
@@ -640,8 +658,7 @@ footer p:last-child { font-size: 0.8rem; color: var(--muted); }
   .grid-2 { grid-template-columns: 1fr; gap: 3rem; }
   .grid-2-contato { grid-template-columns: 1fr; gap: 3rem; }
   .sobre-badge { bottom: -1rem; right: 0; }
-  .eventos-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
-  .evento-card.grande { grid-column: span 1; }
+  .eventos-track .evento-card { width: 280px; height: 220px; }
   .servicos-grid { grid-template-columns: 1fr; }
   .depo-grid { grid-template-columns: 1fr; }
   .depo-card:last-child { grid-column: span 1; }
